@@ -1,2 +1,19 @@
-# kkomy.github.io
-Design portfolio — Moonkyeom Kim
+# Moonkyeom Kim — Design Portfolio
+
+사이트: https://kkomy.github.io/
+
+## 작업물을 올리는 방법
+
+1. https://kkomy.github.io/?edit=1 에서 **작업 추가** 또는 **작업 수정**을 누릅니다.
+2. 이미지(JPG/PNG/WebP, 최대 8MB), 제목, 분야, 연도, 설명을 입력합니다.
+3. **미리보기에 반영** 후 **게시 파일 다운로드**를 누릅니다.
+4. 이 저장소 첫 화면의 **Add file → Upload files**에서 다운로드한 `portfolio.json`을 올립니다.
+5. **Commit changes**를 누르면 GitHub Pages에 반영됩니다. 보통 몇 분이 걸립니다.
+
+이미지는 자동으로 크기를 조정해 JSON 파일 안에 포함됩니다. 이미지가 많은 경우 게시 파일이 GitHub 웹 업로드 제한(25MB)을 넘지 않도록 나누어 관리하거나 Git을 이용하세요.
+
+이 편집 화면은 서버에 바로 저장하는 관리자 페이지가 아닙니다. 로그인 정보나 토큰을 요구하지 않으며 방문자는 저장소를 수정할 권한이 없으므로 사이트를 바꿀 수 없습니다. 다운로드 전에 페이지를 닫거나 새로고침하면 변경 사항이 사라집니다.
+
+이름, 소개, 연락 이메일은 작업 관리의 About 영역에서 수정할 수 있습니다. 샘플 두 개는 AI 생성 예시이며 실제 경력이 아닙니다. 본인의 작업물로 교체하고 샘플 표시를 해제하세요.
+
+GitHub Pages 설정: `main` 브랜치의 `/ (root)`에서 게시합니다. `.nojekyll` 파일은 유지하세요.
