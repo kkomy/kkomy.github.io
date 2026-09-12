@@ -4,22 +4,72 @@
   "email": "",
   "projects": [
     {
-      "id": "form-studio",
-      "title": "FORM — A new perspective",
-      "category": "Brand identity · Art direction",
-      "year": "2026",
-      "description": "브랜드의 형태와 리듬을 탐구하는 가상의 아이덴티티 프로젝트입니다. 선명한 블루와 타이포그래피로 일관된 시각 언어를 구성했습니다.\n\n이 이미지는 포트폴리오 레이아웃을 보여주기 위한 AI 생성 샘플이며, 실제 수행한 작업이 아닙니다. 작업 관리에서 본인의 이미지와 설명으로 교체해 주세요.",
-      "image": "./images/form-studio.webp",
-      "sample": true
+      "section": "design",
+      "id": "postech-kaist-2024",
+      "title": "2024 포스텍-카이스트 학생대제전",
+      "category": "Poster Design",
+      "year": "2024",
+      "description": "",
+      "image": "./portfolio/postech-kaist-2024.webp"
     },
     {
-      "id": "between-pages",
-      "title": "Between the pages",
-      "category": "Editorial design · Typography",
-      "year": "2026",
-      "description": "여백, 그리드, 활자의 대비를 실험한 가상의 편집 디자인 프로젝트입니다. 이미지와 텍스트 사이의 균형을 중심으로 구성했습니다.\n\n이 이미지는 포트폴리오 레이아웃을 보여주기 위한 AI 생성 샘플이며, 실제 수행한 작업이 아닙니다. 작업 관리에서 본인의 이미지와 설명으로 교체해 주세요.",
-      "image": "./images/editorial.webp",
-      "sample": true
+      "section": "design",
+      "id": "aljam",
+      "title": "알잠",
+      "category": "Graphic Design",
+      "year": "2024",
+      "description": "",
+      "image": "./portfolio/aljam.webp"
+    },
+    {
+      "section": "design",
+      "id": "postech-kaist-eve-video",
+      "title": "포스텍-카이스트 학생대제전 전야제",
+      "category": "Video Editing",
+      "year": "2023",
+      "description": "",
+      "image": "./portfolio/eve-highlight.webp",
+      "media": "./portfolio/postech-kaist-eve.mp4"
+    },
+    {
+      "section": "design",
+      "id": "saeteo-ot-video",
+      "title": "새터응원 OT",
+      "category": "Video Editing",
+      "year": "2023",
+      "description": "",
+      "image": "./portfolio/ot-cheering-highlight.webp",
+      "media": "./portfolio/saeteo-ot.mp4"
+    },
+    {
+      "section": "projects",
+      "id": "techalendar",
+      "title": "TECHALENDAR",
+      "category": "Content Project",
+      "year": "2024",
+      "description": "최신 기술의 동향에 대한 이슈들을 정기적으로 공유하는 Tech-Reivew의 정기 소식지 TECHALENDAR 기획",
+      "link": "https://tech-review.notion.site/TECHALENDAR-da3689c3674b4965ac52b23cb4ffe223",
+      "image": "./portfolio/techalendar.webp"
+    },
+    {
+      "section": "projects",
+      "id": "startup-magazine",
+      "title": "Wake Up, Start Up",
+      "category": "Editorial Project",
+      "year": "2024",
+      "description": "POSTECH 기술창업 매거진 <Wake Up, Start Up> 1호 필진 참여",
+      "image": "./portfolio/startup-magazine.webp",
+      "media": "./portfolio/startup-magazine.pdf"
+    },
+    {
+      "section": "projects",
+      "id": "ces-2024-docent",
+      "title": "CES 2024 도슨트 투어",
+      "category": "Presentation / Research",
+      "year": "2024",
+      "description": "CES 2024 도슨트 투어 기획 및 해설 담당",
+      "image": "./portfolio/ces-docent.webp",
+      "media": "./portfolio/ces-docent.pdf"
     }
   ]
 }
