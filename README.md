@@ -1,21 +1,62 @@
-# Moonkyeom Kim — PortFolio
+# Moonkyeom Kim — Portfolio
 
 사이트: https://kkomy.github.io/
 
-## 작업물을 올리는 방법
+빌드 과정이 없는 정적 사이트입니다. 파일을 고쳐서 `main`에 올리면 그대로 반영됩니다.
 
-1. https://kkomy.github.io/?edit=1 에서 **Design 추가**, **Projects 추가** 또는 **작업 수정**을 누릅니다.
-2. 이미지(JPG/PNG/WebP, 최대 8MB), 제목, 분야, 연도, 설명을 입력합니다.
-3. **미리보기에 반영** 후 **게시 파일 다운로드**를 누릅니다.
-4. 이 저장소 첫 화면의 **Add file → Upload files**에서 다운로드한 `portfolio.json`을 올립니다.
-5. **Commit changes**를 누르면 GitHub Pages에 반영됩니다. 보통 몇 분이 걸립니다.
+## 구조
 
-이미지는 자동으로 크기를 조정해 JSON 파일 안에 포함됩니다. 이미지가 많은 경우 게시 파일이 GitHub 웹 업로드 제한(25MB)을 넘지 않도록 나누어 관리하거나 Git을 이용하세요.
+| 경로 | 내용 |
+| --- | --- |
+| `index.html`, `css/style.css` | 화면 틀과 스타일 |
+| `js/main.js` | 탭(Book / Design / Project) 전환, 작업물 목록·상세 |
+| `js/book.js` | 3D 책, 펼치기·넘기기, 빨간 실 물리 |
+| `js/pages.js` | 책 본문 조판과 실로 이을 단어 선택 |
+| `book/text.txt` | 책 본문 |
+| `portfolio.json`, `portfolio/` | 작업물 데이터와 이미지·영상·PDF |
+| `vendor/` | three.js |
 
-이 편집 화면은 서버에 바로 저장하는 관리자 페이지가 아닙니다. 로그인 정보나 토큰을 요구하지 않으며 방문자는 저장소를 수정할 권한이 없으므로 사이트를 바꿀 수 없습니다. 다운로드 전에 페이지를 닫거나 새로고침하면 변경 사항이 사라집니다.
+## 작업물 추가·수정
 
-이름, 소개, 연락 이메일은 작업 관리의 About 영역에서 수정할 수 있습니다. 샘플 두 개는 AI 생성 예시이며 실제 경력이 아닙니다. 본인의 작업물로 교체하고 샘플 표시를 해제하세요.
+`portfolio.json`의 `projects` 배열에 항목을 추가합니다.
 
-GitHub Pages 설정: `main` 브랜치의 `/ (root)`에서 게시합니다. `.nojekyll` 파일은 유지하세요.
+```json
+{
+  "section": "design",
+  "id": "my-work",
+  "title": "제목",
+  "category": "Poster Design",
+  "year": "2025",
+  "description": "설명",
+  "image": "./portfolio/my-work.webp",
+  "media": "./portfolio/my-work.mp4",
+  "link": "https://example.com",
+  "gallery": ["./portfolio/my-work-2.webp"]
+}
+```
 
-작업 편집의 **게시할 섹션**에서 디자인/프로젝트를 선택하거나 변경할 수 있습니다. 분류가 없는 기존 작업물은 디자인 섹션에 표시됩니다.
+- `section`: `design` 또는 `projects` (어느 탭에 보일지)
+- `image`: 목록 썸네일 (4:3으로 잘려 보입니다)
+- `media`: 선택. `.mp4`는 영상, `.pdf`는 문서로 상세 화면에 표시
+- `link`, `gallery`: 선택. 외부 링크 버튼, 상세 화면에 이어서 보일 추가 이미지
+
+이름·소개 문구·이메일은 같은 파일의 `name`, `intro`, `email`에서 바꿉니다.
+
+## 책 본문 바꾸기
+
+`book/text.txt`를 고치면 페이지가 자동으로 다시 나뉩니다.
+
+- `# One — The Hatchery` : 장 제목
+- 빈 줄 : 문단 나눔
+- `*word*` : 핵심 동사 (실로 이어질 후보)
+- 등장인물 이름은 `js/pages.js`의 `CHARACTERS` 목록으로 자동 인식합니다.
+
+한 펼침면에서 왼쪽·오른쪽 페이지에 같은 인물이나 같은 동사가 있으면 먼저 잇고, 남는 자리는 동사끼리 순서대로 잇습니다(펼침면당 최대 6가닥).
+
+## 로컬에서 보기
+
+```bash
+python3 -m http.server 4173
+```
+
+GitHub Pages 설정: `main` 브랜치의 `/ (root)`. `.nojekyll` 파일은 유지하세요.
